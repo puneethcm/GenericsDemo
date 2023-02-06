@@ -10,16 +10,16 @@ internal class Program
         char[] charArray = { 'A', 'R', 'R', 'A', 'Y' };
         Console.WriteLine("\nWelcome to Generics");
         Console.WriteLine("\nPlease choose any option below");
-        Console.WriteLine("1:To Print Array\n2:Generic method concept");
+        Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
             case 1:
-                Console.WriteLine("\nInt Array values");
+                //Console.WriteLine("\nInt Array values");
                 PrintArry.ToPrintArray(intArray);
-                Console.WriteLine("\nDouble Array values");
+                //Console.WriteLine("\nDouble Array values");
                 PrintArry.ToPrintArray(doubleArray);
-                Console.WriteLine("\nChar Array values");
+                //Console.WriteLine("\nChar Array values");
                 PrintArry.ToPrintArray(charArray);
                 break;
 
@@ -27,6 +27,15 @@ internal class Program
                 GenericMethod.GenericMethodConcept<int>(intArray);
                 GenericMethod.GenericMethodConcept<double>(doubleArray);
                 GenericMethod.GenericMethodConcept<char>(charArray);
+                break;
+
+            case 3:
+                GenericClass<int> intObj = new GenericClass<int>(intArray);
+                intObj.ToPrint();
+                GenericClass<double> doubleObj = new GenericClass<double>(doubleArray);
+                doubleObj.ToPrint();
+                GenericClass<char> chatObj = new GenericClass<char>(charArray);
+                chatObj.ToPrint();
                 break;
         }
         Console.ReadLine();
