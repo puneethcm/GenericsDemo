@@ -10,7 +10,7 @@ internal class Program
         char[] charArray = { 'A', 'R', 'R', 'A', 'Y' };
         Console.WriteLine("\nWelcome to Generics");
         Console.WriteLine("\nPlease choose any option below");
-        Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept");
+        Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept\n4:Max Integer Numbers");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -36,6 +36,16 @@ internal class Program
                 doubleObj.ToPrint();
                 GenericClass<char> chatObj = new GenericClass<char>(charArray);
                 chatObj.ToPrint();
+                break;
+
+            case 4:
+                Console.WriteLine("Enter 3 Numbers");
+                int a = Convert.ToInt32(Console.ReadLine());
+                int b = Convert.ToInt32(Console.ReadLine());
+                int c = Convert.ToInt32(Console.ReadLine());
+                MaxIntNumber.FindMaxIntValue(a, b, c);
+                Console.Write("{0} is greater than {1},{2},{3}", MaxIntNumber.FindMaxIntValue(a, b, c), a, b, c);
+                Console.WriteLine("2 or 3 values are same");
                 break;
         }
         Console.ReadLine();

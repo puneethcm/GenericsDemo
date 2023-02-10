@@ -3,9 +3,8 @@ namespace GenericDemo
 {
     class PrintArry
     {
-        public static void ToPrintArray()
+        public static void ToPrintArray(int[] array)
         {
-            int[] array=new int[5];
             foreach(int element in array)
             {
                 Console.Write(element + " ");
