@@ -19,7 +19,7 @@ internal class Program
         Console.WriteLine("\nWelcome to Generics");
         Console.WriteLine("\nPlease choose any option below");
         Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept\n4:Max Integer Numbers\n5:Max Float value" +
-            "\n6:Max string value\n7:Refactor 1 Method\n8: Refactor 2 Class\n9:Extend Max Method");
+            "\n6:Max string value\n7:Refactor 1 Method\n8: Refactor 2 Class\n9:Extend Max Generic Method\n10:Extend method");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -93,6 +93,15 @@ internal class Program
                 Console.WriteLine("Integer maximun value: " + intGeneric.MaxMethod());
                 Console.WriteLine("Float maximum value: " + floatGeneric.MaxMethod());
                 Console.WriteLine("String maximium value: " + stringGeneric.MaxMethod());
+                break;
+
+            case 10:
+                ExtendMethod<int> intGen = new ExtendMethod<int>(intArray);
+                ExtendMethod<float> floatGen = new ExtendMethod<float>(floatArray);
+                ExtendMethod<string> stringGen = new ExtendMethod<string>(stringArray);
+                intGen.ToPrintMaxValue();
+                floatGen.ToPrintMaxValue();
+                stringGen.ToPrintMaxValue();
                 break;
         }
         Console.ReadLine();
