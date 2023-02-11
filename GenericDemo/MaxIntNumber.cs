@@ -13,10 +13,15 @@ namespace GenericDemo
             {
                 return secondNumb;
             }
+<<<<<<< HEAD
             else if (thirdNumb.CompareTo(firstNumb) > 0 && thirdNumb.CompareTo(secondNumb) > 0)
+=======
+            else if (secondNumb.CompareTo(firstNumb) > 0 && secondNumb.CompareTo(thirdNumb) > 0)
+>>>>>>> UC4-MaxIntegerNumber
             {
-                return thirdNumb;
+                return secondNumb;
             }
+<<<<<<< HEAD
             throw new Exception("2 or 3 value or same");
         }
         public static float FindMaxValue(float firstNumb, float secondNumb, float thirdNumb)
@@ -34,6 +39,9 @@ namespace GenericDemo
                 return thirdNumb;
             }
             throw new Exception("2 or 3 value or same");
+=======
+            throw new Exception("2 or 3 values are same");
+>>>>>>> UC4-MaxIntegerNumber
         }
     }
 }
