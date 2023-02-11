@@ -13,10 +13,11 @@ namespace GenericDemo
             {
                 return secondNumb;
             }
-            else
+            else if (secondNumb.CompareTo(firstNumb) > 0 && secondNumb.CompareTo(thirdNumb) > 0)
             {
-                return thirdNumb;
+                return secondNumb;
             }
+            throw new Exception("2 or 3 values are same");
         }
     }
 }
