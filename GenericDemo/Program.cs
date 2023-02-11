@@ -10,9 +10,11 @@ internal class Program
         char[] charArray = { 'A', 'R', 'R', 'A', 'Y' };
 
         float p = 12.3f, q = 5.6f, r = 40.6f;
+        string str1 = "abc", str2 = "pqr", str3 = "xyz";
         Console.WriteLine("\nWelcome to Generics");
         Console.WriteLine("\nPlease choose any option below");
-        Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept\n4:Max Integer Numbers\n5:Max Float value");
+        Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept\n4:Max Integer Numbers\n5:Max Float value" +
+            "\n6:Max string value");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -46,13 +48,18 @@ internal class Program
                 int b = Convert.ToInt32(Console.ReadLine());
                 int c = Convert.ToInt32(Console.ReadLine());
                 FindMaxValue.FindMaxValues(a, b, c);
-                Console.Write("{0} is greater than {1},{2},{3}", FindMaxValue.FindMaxValues(a, b, c), a, b, c);
+                Console.Write("{0} is greater than {1}, {2}, {3}", FindMaxValue.FindMaxValues(a, b, c), a, b, c);
                 Console.WriteLine("2 or 3 values are same");
                 break;
 
             case 5:
                 var result = FindMaxValue.FindMaxValues(p,q,r);
-                Console.Write("{0} is greater than {1},{2},{3}", FindMaxValue.FindMaxValues(p,q,r), p,q,r);
+                Console.Write("{0} is greater than {1}, {2}, {3}", FindMaxValue.FindMaxValues(p,q,r), p,q,r);
+                break;
+
+            case 6:
+                FindMaxValue.FindMaxValues(str1, str2, str3);
+                Console.Write("{0} is greater than {1}, {2}, {3}", FindMaxValue.FindMaxValues(str1, str2, str3), str1, str2, str3);
                 break;
         }
         Console.ReadLine();
