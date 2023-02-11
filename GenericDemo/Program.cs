@@ -87,9 +87,9 @@ internal class Program
                 break;
 
             case 9:
-                ExtendMaxMethod<int> intGeneric = new ExtendMaxMethod<int>(intArray);
-                ExtendMaxMethod<float> floatGeneric = new ExtendMaxMethod<float>(floatArray);
-                ExtendMaxMethod<string> stringGeneric = new ExtendMaxMethod<string>(stringArray);
+                ExtendMaxGenericMethod<int> intGeneric = new ExtendMaxGenericMethod<int>(intArray);
+                ExtendMaxGenericMethod<float> floatGeneric = new ExtendMaxGenericMethod<float>(floatArray);
+                ExtendMaxGenericMethod<string> stringGeneric = new ExtendMaxGenericMethod<string>(stringArray);
                 Console.WriteLine("Integer maximun value: " + intGeneric.MaxMethod());
                 Console.WriteLine("Float maximum value: " + floatGeneric.MaxMethod());
                 Console.WriteLine("String maximium value: " + stringGeneric.MaxMethod());
