@@ -46,10 +46,6 @@ internal class Program
                 break;
 
             case 4:
-                //Console.WriteLine("Enter 3 Numbers");
-                //int a = Convert.ToInt32(Console.ReadLine());
-                //int b = Convert.ToInt32(Console.ReadLine());
-                //int c = Convert.ToInt32(Console.ReadLine());
                 FindMaxValue.FindMaxValues(a, b, c);
                 Console.Write("{0} is greater than {1}, {2}, {3}", FindMaxValue.FindMaxValues(a, b, c), a, b, c);
                 Console.WriteLine("2 or 3 values are same");
@@ -78,12 +74,10 @@ internal class Program
                 Console.Write("\nInteger values are {0}, {1}, {2}", a, b, c);
                 RefactorClass<int> intValue = new RefactorClass<int>(a,b,c);
                 intValue.MaxValue();
-
                 RefactorClass<float>.FindMaxValues(p, q, r);
                 Console.Write("\nFloat values are {0}, {1}, {2}", p, q, r);
                 RefactorClass<float> floatValue = new RefactorClass<float>(p, q, r);
                 floatValue.MaxValue();
-
                 RefactorClass<string>.FindMaxValues(str1, str2, str3);
                 Console.Write("\nString values are {0}, {1}, {2}", str1, str2, str3);
                 RefactorClass<string> stringValue = new RefactorClass<string>(str1, str2, str3);
