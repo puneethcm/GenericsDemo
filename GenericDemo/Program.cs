@@ -45,17 +45,14 @@ internal class Program
                 int a = Convert.ToInt32(Console.ReadLine());
                 int b = Convert.ToInt32(Console.ReadLine());
                 int c = Convert.ToInt32(Console.ReadLine());
-                MaxIntNumber.FindMaxValue(a, b, c);
-                Console.Write("{0} is greater than {1},{2},{3}", MaxIntNumber.FindMaxValue(a, b, c), a, b, c);
+                FindMaxValue.FindMaxValues(a, b, c);
+                Console.Write("{0} is greater than {1},{2},{3}", FindMaxValue.FindMaxValues(a, b, c), a, b, c);
                 Console.WriteLine("2 or 3 values are same");
                 break;
 
             case 5:
-                var result = MaxIntNumber.FindMaxValue(p,q,r);
-                if(result!=0)
-                Console.Write("{0} is greater than {1},{2},{3}",result, p,q,r);
-                else
-                Console.WriteLine("2 or 3 values are same");
+                var result = FindMaxValue.FindMaxValues(p,q,r);
+                Console.Write("{0} is greater than {1},{2},{3}", FindMaxValue.FindMaxValues(p,q,r), p,q,r);
                 break;
         }
         Console.ReadLine();
