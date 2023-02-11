@@ -7,6 +7,8 @@ internal class Program
     {
         int[] intArray = { 20, 45, 70, 10, 35 };
         double[] doubleArray = { 30.64, 52.45, 26, 98, 98.7 };
+        float[] floatArray = { 30.6f, 52.45f, 26.5f, 98.9f, 68.4f };
+        string[] stringArray = { "abc", "pqr", "xyz" };
         char[] charArray = { 'A', 'R', 'R', 'A', 'Y' };
 
         int a = 30, b = 20, c = 10;
@@ -17,7 +19,7 @@ internal class Program
         Console.WriteLine("\nWelcome to Generics");
         Console.WriteLine("\nPlease choose any option below");
         Console.WriteLine("1:To Print Array\n2:Generic method concept\n3:Generic class concept\n4:Max Integer Numbers\n5:Max Float value" +
-            "\n6:Max string value\n7:Refactor 1 Method\n8: Refactor 2 Class");
+            "\n6:Max string value\n7:Refactor 1 Method\n8: Refactor 2 Class\n9:Extend Max Method");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -82,6 +84,15 @@ internal class Program
                 Console.Write("\nString values are {0}, {1}, {2}", str1, str2, str3);
                 RefactorClass<string> stringValue = new RefactorClass<string>(str1, str2, str3);
                 stringValue.MaxValue();
+                break;
+
+            case 9:
+                ExtendMaxMethod<int> intGeneric = new ExtendMaxMethod<int>(intArray);
+                ExtendMaxMethod<float> floatGeneric = new ExtendMaxMethod<float>(floatArray);
+                ExtendMaxMethod<string> stringGeneric = new ExtendMaxMethod<string>(stringArray);
+                Console.WriteLine("Integer maximun value: " + intGeneric.MaxMethod());
+                Console.WriteLine("Float maximum value: " + floatGeneric.MaxMethod());
+                Console.WriteLine("String maximium value: " + stringGeneric.MaxMethod());
                 break;
         }
         Console.ReadLine();
